@@ -136,10 +136,10 @@ LOGGING = {
     'disable_existing_loggers': False,
     'filters': {
         'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
+            '()': 'django.utils.log.RequireDebugFalse',
         },
         'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue'
+            '()': 'django.utils.log.RequireDebugTrue',
         },
     },
     'formatters': {
@@ -176,7 +176,7 @@ LOGGING = {
             'maxBytes': 1024*1024*5,
             'backupCount': 5,
             'formatter': 'standard',
-        }
+        },
     },
     'loggers': {
         'django': {
@@ -190,8 +190,8 @@ LOGGING = {
         },
         'pybo': {
             'handlers': ['console', 'file'],
-            'level': 'INFO'
-        }
+            'level': 'INFO',
+        },
     }
 }
 
