@@ -135,10 +135,10 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'filters': {
-        "require_debug_false": {
+        'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         },
-        "require_debug_true": {
+        'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue'
         },
     },
@@ -150,7 +150,7 @@ LOGGING = {
         },
         'standard': {
             'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
-        }
+        },
     },
     'handlers': {
         'console': {
@@ -165,13 +165,13 @@ LOGGING = {
         },
         'mail_admins': {
             'level': 'ERROR',
-            'filter': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
         },
         'file': {
             'level': 'INFO',
             'filters': ['require_debug_false'],
-            'class': 'logging,handler.RotatingFileHandler',
+            'class': 'logging,handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs/mysite.log',
             'maxBytes': 1024*1024*5,
             'backupCount': 5,
