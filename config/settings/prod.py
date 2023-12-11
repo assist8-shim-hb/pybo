@@ -6,7 +6,7 @@ STATICFILES_DIRS = []
 DEBUG = False
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pybo',
         'USER': 'dbmasteruser',
         'PASSWORD': '!74jHF6(3.y=Xm.i_VQyK}oGA4.7Mh.Z',
